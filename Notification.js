@@ -20,6 +20,7 @@ export default class Notification extends Component {
     console.log("Component WILL RECIEVE PROPS!");
   }
   shouldComponentUpdate(newProps, newState) {
+    console.log("Component shouldComponentUpdate");
     return true;
   }
   componentWillUpdate(nextProps, nextState) {
