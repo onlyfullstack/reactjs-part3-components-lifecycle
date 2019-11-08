@@ -10,11 +10,18 @@ class App extends Component {
       notification: 5,
       name: "Only Fullstack"
     };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState({ notification: this.state.notification + 1 });
   }
 
   render() {
     return (
       <div>
+        <button onClick={this.handleClick} >Increment Notification</button>
         <Notification notification={this.state.notification} />
       </div>
     );
